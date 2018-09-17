@@ -1,0 +1,106 @@
+# praktika1ikbo-16-17-
+Сделать форк данного репозитория и написать в файле README.MD ФИО и группу.
+
+Исходный код:
+
+Файл book.java
+
+package com;
+
+public class book {
+    private String name;
+    private int pagecount;
+    
+    public book() {
+        name = "Robinson Crusoe";
+        pagecount = 0;
+    }
+    
+    public book(String n, int p) {
+        name = n;
+        pagecount = p;
+    }
+    
+    public book(String n) {
+        name = n;
+        pagecount = 0;
+    }
+    
+    public void setPagecount(int p) {
+        pagecount = p;
+    }
+    
+    public void setName(String n) {
+        name = n;
+    }
+    
+    public String toString(){
+        return this.name+", pagecount "+this.pagecount;
+    } 
+}
+
+Файл ball.java
+package javaapplication1;
+
+public class ball {
+    private String color;
+    private double size;
+    
+    public ball() {
+        color = "Blue";
+        size = 0;
+    }
+    
+    public ball(String n, double p) {
+        color = n;
+        size = p;
+    }
+    
+    public ball(String n) {
+        color = n;
+        size = 0;
+    }
+    
+    public void setSize(double p) {
+        size = p;
+    }
+    
+    public void setColor(String n) {
+        color = n;
+    }
+    
+    public String toString(){
+        return this.color+", size "+this.size;
+    } 
+    
+}
+
+Файл infoout.java
+package javaapplication1;
+
+public class JavaApplication1 {
+    
+    public static void main(String[] args) {
+        book b1 = new book("Harry Potter", 333);
+        book b2 = new book("Wolf Of Wolf Street");
+        book b3 = new book();
+        b2.setPagecount(500);
+        b3.setName("Fantastic Beasts And Where To Find Them");
+        b3.setPagecount(300);
+        System.out.println(b1);
+        System.out.println(b2);
+        System.out.println(b3);
+        
+        System.out.println("Мячи:");
+        ball ba1 = new ball("Blue",4.4);
+        ball ba2 = new ball("Yellow");
+        ball ba3 = new ball();
+        ba2.setSize(5.5);
+        ba3.setColor("Purple");
+        ba3.setSize(6.6);
+        System.out.println(ba1);
+        System.out.println(ba2);
+        System.out.println(ba3);
+    }
+    
+}
